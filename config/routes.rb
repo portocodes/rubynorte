@@ -2,6 +2,7 @@ Rubynorte::Application.routes.draw do
   resources :talks
 
   get "content/index"
+  get "content/map", :as => 'map'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

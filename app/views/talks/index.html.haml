@@ -1,0 +1,23 @@
+%h1 Listing talks
+
+%table
+  %tr
+    %th Person
+    %th Title
+    %th Summary
+    %th
+    %th
+    %th
+
+  - @talks.each do |talk|
+    %tr
+      %td= talk.person
+      %td= talk.title
+      %td= talk.summary
+      %td= link_to 'Show', talk
+      %td= link_to 'Edit', edit_talk_path(talk)
+      %td= link_to 'Destroy', talk, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Talk', new_talk_path

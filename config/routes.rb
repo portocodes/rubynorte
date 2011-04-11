@@ -1,4 +1,6 @@
 Rubynorte::Application.routes.draw do
+  resources :talks
+
   get "content/index"
 
   # The priority is based upon order of creation:

@@ -1,0 +1,32 @@
+%p#days-missing
+  %span
+    Faltam
+    =((Time.gm(2011,05,14) - Time.now ) / 24 / 3600).to_i
+    dias,
+  %br
+  inscreve-te!
+
+.speaker
+  %img(width='180' height='135')
+  %h1 Ruby + Git = Blogrite
+  %h2 José Mota
+  %p Blogrite é o projeto pessoal do Zé que pretende desafiar a forma como os geeks publicam conteúdo.
+
+.speaker
+  %img(width='180' height='135')
+  %h1 TDD - Test-driven development
+  %h2 Ademar Aguiar
+  %p Desenvolvimento orientado a testes é o pilar do sucesso da linguagem. É difícil mas recompensador.
+
+.speaker
+  %img(width='180' height='135')
+  %h1 Ruby &amp; Javascript
+  %h2 Ricardo Mendes
+  %p Como estabelecer o equilíbrio entre as duas linguagens na Web? O Ricardo partilha alguma da sua experiência.
+
+=form_tag 'speakers/new', :class => 'speaker' do
+  %img(width='180' height='135')
+  %p=text_field_tag :name, 'Tu?', :class => 'h1'
+  %p=text_field_tag :title, 'Sobre que tópico queres falar?', :class => 'h2'
+  %p=text_area_tag :description, 'Escreve uma descrição que atraia a comunidade. Não te esqueças de que são eles que te vêm ouvir!', :rows => 3, :cols => 30
+  %p=submit_tag 'Submeter apresentação'

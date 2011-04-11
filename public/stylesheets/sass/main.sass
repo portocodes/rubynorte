@@ -22,6 +22,10 @@ h2
 
 p,li
   color: #444
+  line-height: 1.3
+
+p,ul,ol
+  //margin-bottom: 1em
 
 header
   height: 210px
@@ -52,6 +56,17 @@ footer
   padding: 1em
   border-top: 1px solid #ddd
   text-align: center
+
+input[type='submit']
+  background: #953539
+  background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255,255,255,.1)),to(rgba(0,0,0,.1)))
+  border: 0
+  -webkit-box-shadow: rgba(0,0,0,.1) 0 3px 5px
+  padding: .5em 1em
+  font: bold 1em "Helvetica Neue"
+  color: #fff
+  border-radius: 3px
+  margin-bottom: 1em
 
 .speaker, #new_talk
   width: 450px
@@ -89,8 +104,15 @@ footer
     float: left
     margin: 0 40px
 
-#new_talk input
-  width: 230px
-  border: 0
-  background: #eee
-  padding: 5px
+#new_talk
+  input[type='text'], textarea
+    width: 230px
+    border: 0
+    background: #eee
+    padding: 5px
+
+#patrocinios img
+  opacity: .15
+  -webkit-transition-duration: .4s
+  &:hover
+    opacity: .7

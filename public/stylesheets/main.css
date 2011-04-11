@@ -28,6 +28,10 @@ header {
   padding-top: 30px;
   background: #8f4444 url("/images/header.png") repeat-x top;
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 10px; }
+  header img {
+    position: absolute;
+    left: -64px;
+    top: 0; }
   header a {
     color: white; }
     header a:after {
@@ -73,12 +77,16 @@ footer {
   font-size: 2.5em;
   line-height: 1.5;
   background: url("/images/glow.png") no-repeat 0 0;
-  margin: -150px auto 30px;
+  margin: -150px auto 60px;
   padding-top: 68px;
-  padding-left: 220px;
-  width: 225px; }
+  padding-left: 40px;
+  width: 425px; }
   #days-missing span {
     color: white; }
+  #days-missing img {
+    display: block;
+    float: left;
+    margin: 0 40px; }
 
 #new_talk input {
   width: 230px;

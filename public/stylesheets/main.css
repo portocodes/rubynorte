@@ -1,0 +1,78 @@
+body, h1, h2, h3, h4, h5, h6, p, li, ol, ul, blockquote {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: #8f4444;
+  text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6, header li, #days-missing {
+  font-family: League Gothic;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 1.7em;
+  color: #222222;
+  letter-spacing: -1px; }
+
+h2 {
+  color: #bbbbbb; }
+
+p, li {
+  color: #444444; }
+
+header {
+  height: 210px;
+  padding-top: 30px;
+  background: #8f4444 url("/images/header.png") repeat-x top;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 10px; }
+  header a {
+    color: white; }
+    header a:after {
+      content: " \2023"; }
+  header h1, header li {
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px;
+    line-height: 1.7; }
+  header ul {
+    float: right;
+    margin-top: -40px;
+    padding-left: 45px;
+    list-style: none;
+    background: url("/images/venue-icons.png") no-repeat 0 0; }
+
+footer {
+  clear: left;
+  padding: 1em;
+  border-top: 1px solid #dddddd;
+  text-align: center; }
+
+.speaker {
+  width: 450px;
+  margin-right: 30px;
+  float: left; }
+  .speaker img {
+    float: left;
+    margin: 0 30px 30px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
+    background: white; }
+
+#bucket, header > div {
+  width: 960px;
+  margin: 0 auto; }
+
+#main {
+  margin-top: 30px; }
+
+#days-missing {
+  font-size: 2.5em;
+  line-height: 1.5;
+  background: url("/images/glow.png") no-repeat 0 0;
+  margin: -150px auto 30px;
+  padding-top: 68px;
+  padding-left: 220px;
+  width: 225px; }
+  #days-missing span {
+    color: white; }

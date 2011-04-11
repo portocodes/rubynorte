@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title Rubynorte - 14 de Maio de 2011
+    = stylesheet_link_tag :all
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+  %body
+    %header
+      %div
+        %h1 Ruby Norte
+        %ul
+          %li 17 de Maio de 2011, 09:30
+          %li=link_to "Muchbeta, Vila Nova de Gaia", "#"
+    #bucket
+      #main= yield
+      %footer
+        %p
+          Segue-nos no Twitter pela hash
+          =link_to "#rubynorte", "https://twitter.com/#search?q=rubynorte"
+          !

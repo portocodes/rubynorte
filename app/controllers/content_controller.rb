@@ -1,6 +1,6 @@
 class ContentController < ApplicationController
   def index
-    @talks = Talk.all
+    @talks = Talk.accepted
     @talk  = Talk.new
   end
 

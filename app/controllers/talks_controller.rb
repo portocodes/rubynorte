@@ -46,10 +46,10 @@ class TalksController < ApplicationController
 
     respond_to do |format|
       if @talk.save
-        format.html { redirect_to(content_index_path, :notice => 'Talk was successfully created.') }
+        format.html { redirect_to(root_path, :notice => 'A tua apresenta&ccedil;&atilde;o foi submetida e ser&aacute; divulgada em breve! Obrigado pelo teu interesse.') }
         format.xml  { render :xml => @talk, :status => :created, :location => @talk }
       else
-        format.html { render :controller => 'content', :action => 'index' }
+        format.html { redirect_to(root_path, :alert => 'Houve um problema a submeter a tua apresenta&ccedil;&atilde;o. Por favor tenta de novo.')}
         format.xml  { render :xml => @talk.errors, :status => :unprocessable_entity }
       end
     end

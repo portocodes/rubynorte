@@ -36,6 +36,7 @@ header
     position: absolute
     left: -64px
     top: 0
+    z-index: 1
   a
     color: #fff
     &:after
@@ -84,11 +85,15 @@ input[type='submit']
   color: #bbb
 
 .flash
+  clear: both
   padding: 1em
   margin-bottom: 1em
   background: #ddd
   color: #999
   border-radius: 3px
+  position: relative
+  z-index: 3
+  -webkit-box-shadow: rgba(0,0,0,.5) 0 3px 5px
   &.notice
     color: #393
     background-color: #dec
@@ -104,6 +109,8 @@ input[type='submit']
 
 #main
   margin-top: 30px  
+  position: relative
+  z-index: 2
 
 #days-missing
   font-size: 2.5em

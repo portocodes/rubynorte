@@ -12,9 +12,9 @@
         %ul
           %li 14 de Maio de 2011, 09:30
           %li=link_to "Geekslab, Afurada Valley, Gaia", map_path, :rel => 'fancybox'
+      =content_tag :div, raw(notice), :class => 'flash notice' if notice
+      =content_tag :div, raw(alert), :class => 'flash alert' if alert
     #bucket
-      =content_tag :div, notice, :class => 'flash notice' if notice
-      =content_tag :div, alert, :class => 'flash alert' if alert
       #main= yield
       %footer
         %h2 Patrocínios

@@ -32,7 +32,8 @@ header {
   header img {
     position: absolute;
     left: -64px;
-    top: 0; }
+    top: 0;
+    z-index: 1; }
   header a {
     color: white; }
     header a:after {
@@ -79,11 +80,15 @@ input[type='submit'] {
   color: #bbbbbb; }
 
 .flash {
+  clear: both;
   padding: 1em;
   margin-bottom: 1em;
   background: #dddddd;
   color: #999999;
-  border-radius: 3px; }
+  border-radius: 3px;
+  position: relative;
+  z-index: 3;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.63) 0 3px 5px; }
   .flash.notice {
     color: #339933;
     background-color: #ddeecc; }
@@ -96,7 +101,9 @@ input[type='submit'] {
   margin: 0 auto; }
 
 #main {
-  margin-top: 30px; }
+  margin-top: 30px;
+  position: relative;
+  z-index: 2; }
 
 #days-missing {
   font-size: 2.5em;

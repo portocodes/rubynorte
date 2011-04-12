@@ -88,7 +88,7 @@ input[type='submit'] {
   border-radius: 3px;
   position: relative;
   z-index: 3;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.63) 0 3px 5px; }
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 3px 5px; }
   .flash.notice {
     color: #339933;
     background-color: #ddeecc; }

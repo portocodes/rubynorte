@@ -78,6 +78,19 @@ input[type='submit'] {
 .h1 {
   color: #bbbbbb; }
 
+.flash {
+  padding: 1em;
+  margin-bottom: 1em;
+  background: #dddddd;
+  color: #999999;
+  border-radius: 3px; }
+  .flash.notice {
+    color: #339933;
+    background-color: #ddeecc; }
+  .flash.alert {
+    color: #993333;
+    background-color: #ffeeee; }
+
 #bucket, header > div {
   width: 960px;
   margin: 0 auto; }

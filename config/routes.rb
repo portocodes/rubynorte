@@ -8,7 +8,7 @@ Rubynorte::Application.routes.draw do
   get "content/index"
   get "content/map", :as => 'map'
 
-  match "/auth/:provider/callback" => "sessions#create"
+  match "/auth/:provider/callback" => "session#create"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

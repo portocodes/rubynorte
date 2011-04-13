@@ -1,14 +1,11 @@
 Rubynorte::Application.routes.draw do
-  get "session/create"
-
-  get "session/destroy"
-
+  resources :admissions
   resources :talks
 
   get "content/index"
   get "content/map", :as => 'map'
 
-  match "/auth/:provider/callback" => "session#create"
+  match "/auth/:provider/callback" => "admissions#create"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

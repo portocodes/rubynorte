@@ -1,7 +1,15 @@
 # encoding: utf-8
-class SessionController < ApplicationController
+class AdmissionsController < ApplicationController
+  def index
+    @admissions = Admission.all
+    render :layout => !request.xhr?
+  end
+
+  def new
+    render :layout => !request.xhr?
+  end
+
   def create
-    # raise request.env['omniauth.auth'].to_yaml
     auth = request.env["omniauth.auth"]
     admission = Admission.find_by_provider_and_uid(auth["provider"], auth["uid"]) ||
       Admission.create!({ provider: auth["provider"] ,

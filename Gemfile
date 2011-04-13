@@ -32,3 +32,5 @@ gem 'sqlite3'
 gem "haml"
 gem "haml-rails"
 gem "jquery-rails"
+gem "omniauth"
+gem "rdiscount"

@@ -1,3 +1,3 @@
 $(function() {
-  $('[rel="fancybox"]').fancybox();
+  $('[rel="fancybox"]').fancybox({padding:0});
 });

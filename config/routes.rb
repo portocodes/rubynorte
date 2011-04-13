@@ -1,8 +1,11 @@
 Rubynorte::Application.routes.draw do
+  resources :admissions
   resources :talks
 
   get "content/index"
   get "content/map", :as => 'map'
+
+  match "/auth/:provider/callback" => "admissions#create"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

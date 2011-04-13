@@ -5,7 +5,27 @@
     =((Time.gm(2011,05,21) - Time.now ) / 24 / 3600).to_i
     dias,
   %br
-  inscreve-te!
+  =link_to "inscreve-te!", '/auth/twitter'
+
+#about
+  :markdown
+    O que é o Rubynorte?
+    ====================
+
+    Rubynorte é o encontro para todos aqueles que querem aprender
+    mais sobre a linguagem de programação Ruby. Todos estão
+    convidados a participar no evento.
+
+    O próximo evento será no dia *21 de Maio de 2011* às 9h30 em
+    Vila Nova de Gaia, no #{link_to "Afurada Valley", map_path, :rel => 'fancybox'}.
+    
+    ## Já estão inscritas #{pluralize @admissions.count, "pessoa"}.
+  
+  %ul#admissions
+    -@admissions.each do |admission|
+      %li
+        =image_tag admission.image_url, :width => 30
+        =link_to admission.name, "http://twitter.com/#{admission.screen_name}"
 
 -@talks.each do |talk|
   .speaker

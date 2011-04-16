@@ -168,6 +168,9 @@ ul#admissions {
     float: none;
     width: auto; }
 
+  #about {
+    margin-right: 0; }
+
   header ul, #new_talk {
     margin: 0; }
 

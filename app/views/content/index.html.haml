@@ -24,8 +24,7 @@
   %ul#admissions
     -@admissions.each do |admission|
       %li
-        =image_tag admission.image_url, :width => 30
-        =link_to admission.name, "http://twitter.com/#{admission.screen_name}"
+        =link_to image_tag(admission.image_url),"http://twitter.com/#{admission.screen_name}",:title => admission.name
 
 -@talks.each do |talk|
   .speaker

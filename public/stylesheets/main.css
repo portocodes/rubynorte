@@ -146,6 +146,8 @@ input[type='submit'] {
 
 ul#admissions {
   list-style: none; }
+  ul#admissions li {
+    float: left; }
   ul#admissions img {
     vertical-align: top;
     margin-right: 10px;

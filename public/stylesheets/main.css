@@ -132,7 +132,8 @@ input[type='submit'] {
 
 #patrocinios img {
   opacity: 0.15;
-  -webkit-transition-duration: 0.4s; }
+  -webkit-transition-duration: 0.4s;
+  margin-right: 2em; }
   #patrocinios img:hover {
     opacity: 0.7; }
 

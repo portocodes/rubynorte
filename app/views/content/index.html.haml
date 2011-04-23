@@ -26,6 +26,13 @@
       %li
         =link_to image_tag(admission.image_url),"http://twitter.com/#{admission.screen_name}",:title => admission.name
 
+=form_for @talk, :class => 'speaker' do |f|
+  %img(width='180' height='135')
+  %p=f.text_field :person, :value => 'Tu?', :class => 'h1'
+  %p=f.text_field :title, :value => 'Sobre que tópico queres falar?', :class => 'h2'
+  %p=f.text_area :summary, :placeholder => 'Escreve uma descrição que atraia a comunidade. Não te esqueças de que são eles que te vêm ouvir!', :rows => 3, :cols => 30
+  %p=f.submit 'Submeter apresentação'
+
 -@talks.each do |talk|
   .speaker
     %img(width='180' height='135')
@@ -33,9 +40,3 @@
     %h2=talk.person
     %p=talk.summary
 
-=form_for @talk, :class => 'speaker' do |f|
-  %img(width='180' height='135')
-  %p=f.text_field :person, :value => 'Tu?', :class => 'h1'
-  %p=f.text_field :title, :value => 'Sobre que tópico queres falar?', :class => 'h2'
-  %p=f.text_area :summary, :placeholder => 'Escreve uma descrição que atraia a comunidade. Não te esqueças de que são eles que te vêm ouvir!', :rows => 3, :cols => 30
-  %p=f.submit 'Submeter apresentação'

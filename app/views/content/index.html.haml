@@ -28,7 +28,7 @@
 
 =form_for @talk, :class => 'speaker' do |f|
   %img(width='180' height='135')
-  %p=f.text_field :person, :value => 'Tu?', :class => 'h1'
+  %p=f.text_field :person, :value => 'Tu? (escreve aqui o teu nome)', :class => 'h1'
   %p=f.text_field :title, :value => 'Sobre que tópico queres falar?', :class => 'h2'
   %p=f.text_area :summary, :placeholder => 'Escreve uma descrição que atraia a comunidade. Não te esqueças de que são eles que te vêm ouvir!', :rows => 3, :cols => 30
   %p=f.submit 'Submeter apresentação'

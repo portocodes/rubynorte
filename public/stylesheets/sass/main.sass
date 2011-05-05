@@ -28,10 +28,12 @@ p,ul,ol
   //margin-bottom: 1em
 
 header
+  display: block
   height: 210px
   padding-top: 30px
   background: #8f4444 url('/images/header.png') repeat-x top
   -webkit-box-shadow: rgba(0,0,0,.5) 0 5px 10px
+  -moz-box-shadow: rgba(0,0,0,.5) 0 5px 10px
   img
     position: absolute
     left: -64px
@@ -53,6 +55,7 @@ header
     background: url('/images/venue-icons.png') no-repeat 0 0
 
 footer
+  display: block
   clear: left
   padding: 1em
   border-top: 1px solid #ddd
@@ -78,8 +81,10 @@ input[type='submit']
   float: left
   img
     float: left
-    margin: 0 30px 30px 0
+    margin: 0 28px 30px 0
+    border: 1px solid #ddd
     -webkit-box-shadow: rgba(0,0,0,.3) 0 2px 5px
+    -moz-box-shadow: rgba(0,0,0,.3) 0 2px 5px
     background: #fff
 
 .h1

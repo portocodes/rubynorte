@@ -4,7 +4,7 @@ class ContentController < ApplicationController
     @talk  = Talk.new
     @admissions = Admission.all
 
-    @user = @admissions.find_by_provider_and_uid session[:user][:provider], session[:user][:uid] if session[:user]
+    @user = Admission.find_by_provider_and_uid session[:user][:provider], session[:user][:uid] if session[:user]
   end
 
   def map

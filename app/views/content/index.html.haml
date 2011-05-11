@@ -26,10 +26,9 @@
     O próximo evento será no dia *21 de Maio de 2011* às 9h30 em
     Vila Nova de Gaia, no #{link_to "Afurada Valley", map_path, :rel => 'fancybox'}.
     
-    #{link_to "Estamos quase a arrancar, por favor confirmem que vão.", '/auth/twitter', :class => 'button'}
-
     ## Já estão inscritas #{pluralize @admissions.count, "pessoa"}.
 
+  %p=link_to "Estamos quase a arrancar, por favor confirmem que vão.", '/auth/twitter', :class => 'button'
   %ul#admissions
     -@admissions.each do |admission|
       %li{:class => admission.confirmed ? 'confirmed' : '' }

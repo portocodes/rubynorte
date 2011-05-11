@@ -58,7 +58,7 @@ footer {
   border-top: 1px solid #dddddd;
   text-align: center; }
 
-input[type='submit'] {
+input[type='submit'], .button {
   background: #953539;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), to(rgba(0, 0, 0, 0.1)));
   border: 0;

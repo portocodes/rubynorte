@@ -11,7 +11,7 @@
   #confirm-admission
     %p Confirmas que apareces no Rubynorte no dia 21?
     -form_for @user do |f|
-      =f.hidden :confirmed, 1
+      =f.hidden_field :confirmed, 1
       =f.submit 'Confirmo!'
 
 #about

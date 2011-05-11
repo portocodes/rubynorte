@@ -17,7 +17,7 @@ class AdmissionsController < ApplicationController
         name: auth["user_info"]["name"] ,
         image_url: auth["user_info"]["image"] ,
         screen_name: auth["user_info"]["nickname"]})
-    session[:user] = { :provider => admission.provider, :uid => admission.uid, :name => admission.name}
+    session[:user] = { :provider => admission.provider, :uid => admission.uid, :name => admission.name, :confirmed => admission.confirmed }
     redirect_to root_url, :notice => "Obrigado por te teres inscrito! Estás entre #{Admission.count - 1} outros rubyistas (para já). Traz um amigo!"
   end
 

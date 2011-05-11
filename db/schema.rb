@@ -10,25 +10,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110413214045) do
+ActiveRecord::Schema.define(:version => 20110511180557) do
 
   create_table "admissions", :force => true do |t|
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "name"
-    t.string   "image_url"
-    t.string   "screen_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "provider"
+    t.string    "uid"
+    t.string    "name"
+    t.string    "image_url"
+    t.string    "screen_name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.boolean   "confirmed"
+    t.datetime  "confirmed_at"
   end
 
   create_table "talks", :force => true do |t|
-    t.string   "person"
-    t.string   "title"
-    t.text     "summary"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "accepted",   :default => false
+    t.string    "person"
+    t.string    "title"
+    t.text      "summary"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.boolean   "accepted",   :default => false
   end
 
 end

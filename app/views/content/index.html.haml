@@ -7,6 +7,13 @@
   %br
   =link_to "inscreve-te!", '/auth/twitter'
 
+-if session[:user] && !session[:user][:confirmed]
+  #confirm-admission
+    %p Confirmas que apareces no Rubynorte no dia 21?
+    -form_for @user do |f|
+      =f.hidden :confirmed, 1
+      =f.submit 'Confirmo!'
+
 #about
   :markdown
     O que é o Rubynorte?
@@ -23,7 +30,7 @@
   
   %ul#admissions
     -@admissions.each do |admission|
-      %li
+      %li{:class => admission.confirmed ? 'confirmed' : '' }
         =link_to image_tag(admission.image_url, :width => '40'),"http://twitter.com/#{admission.screen_name}",:title => admission.name
 
 =form_for @talk, :class => 'speaker' do |f|

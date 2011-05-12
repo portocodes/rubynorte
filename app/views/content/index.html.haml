@@ -26,13 +26,20 @@
     O próximo evento será no dia *21 de Maio de 2011* às 9h30 em
     Vila Nova de Gaia, no #{link_to "Afurada Valley", map_path, :rel => 'fancybox'}.
     
-    ## Já estão inscritas #{pluralize @admissions.count, "pessoa"}.
+  %h2
+    Já estão inscritas
+    ="#{pluralize @admissions.count, "pessoa"},"
+    =@confirmed_count
+    confirmadas.
 
-  %p=link_to "Estamos quase a arrancar, por favor confirmem que vão.", '/auth/twitter', :class => 'button'
   %ul#admissions
     -@admissions.each do |admission|
       %li{:class => admission.confirmed ? 'confirmed' : '' }
         =link_to image_tag(admission.image_url, :width => '40'),"http://twitter.com/#{admission.screen_name}",:title => admission.name
+
+  %p.tip De modo a podermos preparar os pormenores do evento, pedimo-vos que confirmem a vossa presença através do botão abaixo. Oferecemo-vos uma auréola verde no vosso avatar em troca :)
+  %p#confirm_button
+    =link_to raw("Quero confirmar a minha inscrição &#9656;"), '/auth/twitter', :class => 'button'
 
 =form_for @talk, :class => 'speaker' do |f|
   %img(width='180' height='135')

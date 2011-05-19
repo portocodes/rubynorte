@@ -1,6 +1,6 @@
 class ContentController < ApplicationController
   def index
-    @talks = Talk.accepted
+    @talks = Talk.accepted.order('title')
     @talk  = Talk.new
     @admissions = Admission.order('created_at')
     @confirmed_count = @admissions.map { |ab| ab.confirmed }.count { |ac| ac == true }

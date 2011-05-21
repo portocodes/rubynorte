@@ -1,11 +1,7 @@
 %p#days-missing
-  %img(src='/images/clock.png')
-  %span
-    Faltam
-    =((Time.gm(2011,05,21) - Time.now ) / 24 / 3600).to_i
-    dias,
+  %span Obrigado por terem vindo,
   %br
-  =link_to "inscreve-te!", '/auth/twitter'
+  o Rubynorte foi fenomenal!
 
 -if session[:user] && !session[:user][:confirmed]
   #confirm-admission
@@ -23,11 +19,8 @@
     mais sobre a linguagem de programação Ruby. Todos estão
     convidados a participar.
 
-    O próximo evento será no dia *21 de Maio de 2011* às 9h30 em
-    Vila Nova de Gaia, no #{link_to "Afurada Valley", map_path, :rel => 'fancybox'}.
-    
   %h2
-    Já estão inscritas
+    No último evento tivemos inscritas
     ="#{pluralize @admissions.count, "pessoa"},"
     =@confirmed_count
     confirmadas.
@@ -36,17 +29,6 @@
     -@admissions.each do |admission|
       %li{:class => admission.confirmed ? 'confirmed' : '' }
         =link_to image_tag(admission.image_url, :width => '40'),"http://twitter.com/#{admission.screen_name}",:title => admission.name
-
-  %p.tip De modo a podermos preparar os pormenores do evento, pedimo-vos que confirmem a vossa presença através do botão abaixo. Oferecemo-vos uma auréola verde no vosso avatar em troca :)
-  %p#confirm_button
-    =link_to raw("Quero confirmar a minha inscrição &#9656;"), '/auth/twitter', :class => 'button'
-
-=form_for @talk, :class => 'speaker' do |f|
-  %img(width='180' height='135')
-  %p=f.text_field :person, :value => 'Tu? (escreve aqui o teu nome)', :class => 'h1'
-  %p=f.text_field :title, :value => 'Sobre que tópico queres falar?', :class => 'h2'
-  %p=f.text_area :summary, :placeholder => 'Escreve uma descrição que atraia a comunidade. Não te esqueças de que são eles que te vêm ouvir!', :rows => 3, :cols => 30
-  %p=f.submit 'Submeter apresentação'
 
 -@talks.each do |talk|
   .speaker

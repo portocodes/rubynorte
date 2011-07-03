@@ -10,12 +10,11 @@ a {
   text-decoration: none; }
 
 h1, h2, h3, h4, h5, h6, header li, #days-missing, .h1, .h2 {
-  font-family: League Gothic;
+  font-family: "Bebas Neue";
   font-weight: normal;
   text-transform: uppercase;
   font-size: 1.7em;
-  color: #222222;
-  letter-spacing: -1px; }
+  color: #222222; }
 
 h2 {
   color: #bbbbbb; }
@@ -26,11 +25,9 @@ p, li {
 
 header {
   display: block;
-  height: 210px;
-  padding-top: 30px;
+  height: 44px;
   background: #8f4444 url("/images/header.png") repeat-x top;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 10px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 10px; }
+  border-bottom: 1px solid #7e3333; }
   header img {
     position: absolute;
     left: -64px;
@@ -43,7 +40,7 @@ header {
   header h1, header li {
     color: white;
     text-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px;
-    line-height: 1.7; }
+    line-height: 45px; }
   header ul {
     float: right;
     margin-top: -40px;
@@ -107,9 +104,10 @@ input[type='submit'], .button {
   background: #ffffdd;
   padding: 1em; }
 
-#confirm_button {
-  font-size: 1.5em;
-  margin: 1em 0; }
+.half {
+  float: left;
+  width: 460px;
+  margin-right: 20px; }
 
 #bucket, header > div {
   width: 960px;
@@ -137,6 +135,23 @@ input[type='submit'], .button {
   #days-missing a {
     background: url("/images/twitter.png") no-repeat right 6px;
     padding-right: 52px; }
+
+#splash {
+  height: 360px;
+  background: url("/images/splash.png") no-repeat bottom center;
+  margin-bottom: 1em; }
+  #splash h1 {
+    font-size: 2.6em;
+    margin-top: 2em; }
+  #splash p {
+    font-size: 1.3em;
+    line-height: 1.2;
+    color: #999999; }
+  #splash img {
+    border: 6px solid white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 6px;
+    -webkit-transform: rotate(2deg);
+    margin-top: 3em; }
 
 #new_talk input[type='text'], #new_talk textarea {
   width: 230px;
@@ -175,6 +190,10 @@ ul#admissions {
     -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 3px 3px; }
     ul#admissions img:hover {
       background: #8f4444; }
+
+#confirm_button {
+  font-size: 1.5em;
+  margin: 1em 0; }
 
 #confirm-admission {
   background: rgba(50, 255, 0, 0.2);

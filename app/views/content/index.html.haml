@@ -1,8 +1,3 @@
-%p#days-missing
-  %span Obrigado por terem vindo,
-  %br
-  o Rubynorte foi fenomenal!
-
 -if session[:user] && !session[:user][:confirmed]
   #confirm-admission
     %p Confirmas que apareces no Rubynorte no dia 21?
@@ -10,14 +5,18 @@
       =f.hidden_field :confirmed, :value => 1
       =f.submit 'Confirmo!'
 
-#about
-  :markdown
-    O que é o Rubynorte?
-    ====================
 
-    Rubynorte é o encontro para todos aqueles que querem aprender
-    mais sobre a linguagem de programação Ruby. Todos estão
-    convidados a participar.
+#splash
+  .half
+    %h1 Ruby, Rails, Sinatra... em Portugal.
+
+    %p
+      Rubynorte é o encontro para todos aqueles que querem aprender mais sobre
+      a linguagem de programação Ruby.
+  
+  .half=image_tag "/images/rn1.png",:alt => "1 encontro Ruby Norte"
+  
+#about
 
   %h2
     No último evento tivemos inscritas
